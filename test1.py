@@ -4,7 +4,7 @@ import json
 import re
 
 # Initialize the Groq client with your API key
-client = Groq(api_key="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")
+client = Groq(api_key="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")
 
 # Function to extract the JSON-like content from the API response
 def extract_json_from_response(response_text):
@@ -36,7 +36,7 @@ def generate_quiz(content):
 
     try:
         completion = client.chat.completions.create(
-            model="llama-3.1-70b-versatile",
+            model="llama-3.3-70b-versatile",
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_prompt}
